@@ -12,11 +12,11 @@
   ],
   "routes": [
     {
-      "src": "/api/status",
+      "src": "/status",
       "dest": "/api/status"
     },
     {
-      "src": "/api/send-message",
+      "src": "/send-message",
       "dest": "/api/send-message"
     },
     {
