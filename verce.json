@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/*.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/status",
+      "dest": "/api/status"
+    },
+    {
+      "src": "/send-message",
+      "dest": "/api/send-message"
+    }
+  ]
+}
