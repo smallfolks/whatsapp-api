@@ -10,22 +10,8 @@
       "use": "@vercel/static"
     }
   ],
-  "routes": [
-    {
-      "src": "/api/status",
-      "dest": "/api/status"
-    },
-    {
-      "src": "/api/send-message",
-      "dest": "/api/send-message"
-    },
-    {
-      "src": "/api/logout",
-      "dest": "/api/logout"
-    },
-    {
-      "src": "/",
-      "dest": "/api/status"
-    }
-  ]
+  "routes": [{
+    "src": "/.*",
+    "dest": "server.js"
+  }]
 }
