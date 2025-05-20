@@ -7,7 +7,7 @@ module.exports = async (req, res) => {
 
         res.json({
             status,
-            qrCode: status === 'awaiting_qr_scan' ? getQrCode() : null,
+            qrCode: getQrCode(),
             timestamp: new Date().toISOString()
         });
     } catch (error) {
