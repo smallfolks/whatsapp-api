@@ -20,8 +20,12 @@
       "dest": "/api/send-message"
     },
     {
+      "src": "/api/logout",
+      "dest": "/api/logout"
+    },
+    {
       "src": "/",
-      "dest": "/public/index.html"
+      "dest": "/api/status"
     }
   ]
 }
