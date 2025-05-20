@@ -12,9 +12,9 @@ app.use(morgan('dev'));
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
-app.get('/status', require('./api/status'));
-app.post('/send-message', express.json({ limit: '10mb' }), require('./api/send-message'));
-app.post('/logout', require('./api/logout'));
+app.get('/whatsapp-api/status', require('./api/status'));
+app.post('/whatsapp-api/send-message', express.json({ limit: '10mb' }), require('./api/send-message'));
+app.post('/whatsapp-api/logout', require('./api/logout'));
 
 // Start server
 app.listen(port, () => {
