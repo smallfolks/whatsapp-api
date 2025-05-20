@@ -10,9 +10,9 @@ const router = Router();
 router.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 })
-router.get('/status', require('./api/status'));
-router.post('/send-message', express.json({ limit: '10mb' }), require('./api/send-message'));
-router.post('/logout', require('./api/logout'));
+router.get('/status', require('./status'));
+router.post('/send-message', express.json({ limit: '10mb' }), require('./send-message'));
+router.post('/logout', require('./logout'));
 
 app.use(morgan('dev'));
 app.use(router)
