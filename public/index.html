@@ -86,7 +86,7 @@
             clearQRCode();
             connectionInfoElement.innerHTML = `
                     <p>WhatsApp is connected and ready to use!</p>
-                    <p>API Endpoint: <code>/send-message</code></p>
+                    <p>API Endpoint: <code>/whatsapp-api/send-message</code></p>
                 `;
             logoutBtn.style.display = 'block';
         }
@@ -140,7 +140,7 @@
             logoutBtn.disabled = true;
             logoutBtn.textContent = 'Logging out...';
 
-            const response = await fetch('/logout', {
+            const response = await fetch('/whatsapp-api/logout', {
                 method: 'POST'
             });
 
@@ -164,7 +164,7 @@
     // Poll the status endpoint every 2 seconds
     async function checkStatus() {
         try {
-            const response = await fetch('/status');
+            const response = await fetch('/whatsapp-api/status');
             const data = await response.json();
             updateStatus(data);
 
